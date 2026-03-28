@@ -1,0 +1,9 @@
+{
+  "name": "exam-json-reader",
+  "version": "1.0.0",
+  "description": "Browser-based JSON proofreading and rendering tool for structured exam papers.",
+  "scripts": {
+    "build": "python3 ./scripts/build.py",
+    "dev": "python3 -m http.server 5173"
+  }
+}
