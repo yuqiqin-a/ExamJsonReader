@@ -6,18 +6,10 @@ This project is designed for editors who need to inspect, validate, and adjust J
 
 ## Scope
 
-This repository contains the **web version only**.
-
 Included:
 - Browser UI source
 - Static build pipeline
 - JSON render / edit logic
-
-Excluded from version control:
-- Native macOS app wrapper
-- Electron wrapper
-- Local build artifacts
-- Local data files
 
 ## Core Features
 
