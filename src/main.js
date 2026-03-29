@@ -344,11 +344,12 @@ function buildSectionTypeControl(section, sectionIndex) {
   input.addEventListener("click", (event) => event.stopPropagation());
   input.addEventListener("mousedown", (event) => event.stopPropagation());
   input.addEventListener("change", () => {
-    updateSectionType(sectionIndex, input.value.trim());
+    commitSectionTypeInput(sectionIndex, input);
   });
   input.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
+      commitSectionTypeInput(sectionIndex, input);
       input.blur();
     }
   });
@@ -378,6 +379,13 @@ function buildSectionTypeControl(section, sectionIndex) {
   }
 
   return wrapper;
+}
+
+function commitSectionTypeInput(sectionIndex, inputEl) {
+  if (!inputEl) {
+    return;
+  }
+  updateSectionType(sectionIndex, inputEl.value.trim());
 }
 
 function buildSectionSplitDivider(sectionIndex, rowIndex) {
